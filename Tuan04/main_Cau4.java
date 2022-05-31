@@ -38,7 +38,11 @@ public class main_Cau4 {
                 case 6:
                     gv.xuat();
                     break;
+                case 0:
+                    System.out.println("\nThoat chuong trinh!");
+                    break;
                 default:
+                    System.out.println("Lua chon khong hop le, moi ban chon lai!");
                     break;
             }
             System.out.println("\nNhan phim enter de tiep tuc");
