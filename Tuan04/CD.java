@@ -1,5 +1,7 @@
 package Tuan04;
 
+import java.util.Scanner;
+
 public class CD {
     private int maCD, soBaiHat;
     private String tenCD, caSi;
@@ -56,12 +58,30 @@ public class CD {
         this.giaThanh = giaThanh;
     }
 
+    public void nhap() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhap ma CD: ");
+        maCD = sc.nextInt();
+        System.out.print("Nhap ten CD: ");
+        tenCD = sc.nextLine();
+        tenCD = sc.nextLine();
+        System.out.print("Nhap ten ca si: ");
+        caSi = sc.nextLine();
+        System.out.print("Nhap so bai hat: ");
+        soBaiHat = sc.nextInt();
+        System.out.print("Nhap gia thanh: ");
+        giaThanh = sc.nextFloat();
+    }
+
     public void xuat(){
         System.out.printf("%-10d%-20s%-20s%-10d%-10.2f\n", maCD, tenCD, caSi, soBaiHat, giaThanh);
     }
 
+    public String toString(){
+        return String.format("%-10d%-20s%-20s%-10d%-10.2f\n", maCD, tenCD, caSi, soBaiHat, giaThanh);
+    }
+
     @Override
-    //equal
     public boolean equals(Object obj) {
         if (obj instanceof CD) {
             CD cd = (CD) obj;
@@ -69,6 +89,4 @@ public class CD {
         }
         return false;
     }
-
-
 }
