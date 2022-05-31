@@ -16,9 +16,9 @@ public class main_Cau5 {
             System.out.println("4. Xuat  danh sach hoc vien");
             System.out.println("5. Xuat  danh sach nhan vien quan ly");
             System.out.println("6. Xuat  danh sach giao vien");
-            System.out.println("Thoat");
+            System.out.println("0. Thoat");
             System.out.print("Moi ban chon: ");
-            choose = new Scanner(System.in).nextInt();
+            choose = sc.nextInt();
             switch (choose) {
                 case 1:
                     dshv.nhapDSHocVien();
@@ -38,10 +38,15 @@ public class main_Cau5 {
                 case 6:
                     dsgv.xuatDSGiaoVien();
                     break;
+                case 0:
+                    System.out.println("\nThoat chuong trinh!");
+                    break;
                 default:
+                    System.out.println("Lua chon khong hop le, moi ban chon lai!");
                     break;
             }
             System.out.println("\nNhan phim enter de tiep tuc");
+            sc.nextLine();
             sc.nextLine();
         } while (choose != 0);
     }
