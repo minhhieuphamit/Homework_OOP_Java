@@ -20,6 +20,8 @@ public class PersonalModel<T> {
     public void display() {
         for (T t : list) {
             System.out.println(t);
+
+            
         }
     }
 }
