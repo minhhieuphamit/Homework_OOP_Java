@@ -3,35 +3,23 @@ package Tuan07;
 import java.util.ArrayList;
 
 public class PersonalModel<T> {
-    private ArrayList<Student> listStudent;
-    private ArrayList<Employee> listEmployee;
+    private ArrayList<T> list;
 
     public PersonalModel() {
-        listStudent = new ArrayList<Student>();
-        listEmployee = new ArrayList<Employee>();
+        list = new ArrayList<T>();
     }
 
-    public PersonalModel(ArrayList<Student> listStudent, ArrayList<Employee> listEmployee) {
-        this.listStudent = listStudent;
-        this.listEmployee = listEmployee;
+    public PersonalModel(ArrayList<T> list) {
+        this.list = list;
     }
 
-    public void addStudent(Student s) {
-        listStudent.add(s);
-    }
-
-    public void addEmployee(Employee e) {
-        listEmployee.add(e);
+    public void add(T t) {
+        list.add(t);
     }
 
     public void display() {
-        System.out.println("Student");
-        for (Student s : listStudent) {
-            System.out.println(s.toString());
-        }
-        System.out.println("Employee");
-        for (Employee e : listEmployee) {
-            System.out.println(e);
+        for (T t : list) {
+            System.out.println(t);
         }
     }
 }
